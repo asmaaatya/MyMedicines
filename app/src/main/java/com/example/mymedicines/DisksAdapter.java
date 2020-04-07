@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class DisksAdapter extends RecyclerView.Adapter<DisksAdapter.DisksHolder> {
-    ArrayList<disks1> obj1;
+    ArrayList<item> obj1;
 
-    public DisksAdapter(ArrayList<disks1> obj1) {
+    public DisksAdapter(ArrayList<item> obj1) {
         this.obj1 = obj1;
     }
 
@@ -27,9 +27,9 @@ public class DisksAdapter extends RecyclerView.Adapter<DisksAdapter.DisksHolder>
 
     @Override
     public void onBindViewHolder(@NonNull DisksHolder holder, int position) {
-    disks1 disks=obj1.get(position);
-holder.dtextView.setText(disks.getName());
-holder.dimageView.setImageResource(disks.getImage());
+   item disks=obj1.get(position);
+holder.dtextView.setText(disks.getName_item());
+holder.dimageView.setImageResource(disks.getImg_item());
     }
 
     @Override

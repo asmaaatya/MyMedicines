@@ -21,7 +21,7 @@ ArrayList<medicine1> obj;
     @NonNull
     @Override
     public MedicineHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.meditems,null,false);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.medicine,null,false);
         return  new MedicineHolder(v);
     }
 
