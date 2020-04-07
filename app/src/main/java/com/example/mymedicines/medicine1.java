@@ -4,44 +4,36 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class medicine1 extends Fragment {
-    View view;
-    String name;
 
-    public medicine1(String name, int image) {
-        this.name = name;
-        this.image = image;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    int image;
     public medicine1() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       view=inflater.inflate(R.layout.medicine,container,false);
+     View  view=inflater.inflate(R.layout.medicine,container,false);
+        RecyclerView recyclerView =view.findViewById(R.id.mrec);
+        ArrayList <item> arrayList=new ArrayList<>();
+        arrayList.add(new item(R.drawable.ic_launcher_foreground,"jgvfv"));
+        arrayList.add(new item(R.drawable.ic_launcher_foreground,"jgvfv"));
+        arrayList.add(new item(R.drawable.ic_launcher_foreground,"jgvfv"));
+        arrayList.add(new item(R.drawable.ic_launcher_foreground,"jgvfv"));
+
+        MedicineAdapter medicineAdapter=new MedicineAdapter(arrayList);
+       recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+       recyclerView.setHasFixedSize(true);
+       recyclerView.setAdapter(medicineAdapter);
         return view;
     }
 }

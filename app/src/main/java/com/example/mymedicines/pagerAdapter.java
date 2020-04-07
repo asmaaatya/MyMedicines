@@ -21,7 +21,11 @@ public  void  addFrag(Fragment f,String title){
         titlefrag.add(title);
 }
 
-
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return titlefrag.get(position);
+    }
 
     @Override
     public Fragment getItem(int position) {
