@@ -14,27 +14,28 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-TabLayout tabLayout;
-ViewPager viewPager;
-RecyclerView recyclerView;
-RecyclerView recyclerView1;
+    TabLayout tabLayout;
+    ViewPager viewPager;
+    RecyclerView recyclerView;
+    RecyclerView recyclerView1;
     ArrayList<medicine1> obj;
     ArrayList<disks1> obj1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tabLayout=findViewById(R.id.maintab);
-        viewPager=findViewById(R.id.mainviewpager);
-pagerAdapter adapter=new pagerAdapter(getSupportFragmentManager());
-adapter.addFrag(new medicine1(),"MEDICINE");
-        adapter.addFrag(new disks1(),"DISKS");
-viewPager.setAdapter(adapter);
-intializerecycler();
+        tabLayout = findViewById(R.id.maintab);
+        viewPager = findViewById(R.id.mainviewpager);
+        pagerAdapter adapter = new pagerAdapter(getSupportFragmentManager());
+        adapter.addFrag(new medicine1(), "MEDICINE");
+        adapter.addFrag(new disks1(), "DISKS");
+        viewPager.setAdapter(adapter);
+//intializerecycler();
         tabLayout.setupWithViewPager(viewPager);
     }
-
-    private void intializerecycler() {
+}
+   /* private void intializerecycler() {
         RecyclerView.LayoutManager lm=new LinearLayoutManager(this);
         MedicineAdapter medicineAdapter=new MedicineAdapter(obj);
         obj.add(new medicine1("name",R.drawable.ic_launcher_background));
@@ -51,4 +52,4 @@ recyclerView1.setLayoutManager(lm);
 recyclerView1.setHasFixedSize(true);
 recyclerView1.setAdapter(disksAdapter);
     }
-}
+}**/

@@ -42,7 +42,7 @@ public class disks1 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.disks,container,false);
+        view=inflater.inflate(R.layout.fragment_disks,container,false);
         return  view;
     }
 }

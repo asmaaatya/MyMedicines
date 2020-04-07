@@ -21,7 +21,7 @@ public class DisksAdapter extends RecyclerView.Adapter<DisksAdapter.DisksHolder>
     @NonNull
     @Override
     public DisksHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.disks,null,false);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.diskitem,null,false);
         return new DisksHolder(v);
     }
 
